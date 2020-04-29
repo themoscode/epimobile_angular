@@ -1,0 +1,228 @@
+
+  <header>
+    <div class="container-fluid my-panel-header text-center">
+      <app-panel-header></app-panel-header>
+      <div class="row my-btn-group2" >
+        <div class="col-2 siteTitleTool disabled text-right">
+          <span class="fa fa-pencil" ></span>
+        </div>
+        <div class="col-8 text-center siteTitle">
+            <span class="pointer siteTitle2">Aufträge</span>
+        </div>
+        <div class="col-2 siteTitleTool disabled text-left">
+            <span class="fa fa-plus"></span>
+          </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container" >
+        <input type="search" class="form-control searchBox text-center"  placeholder="Suche..."   />
+        <div style="height:44px"></div>
+      <div class="text-center">
+          <div class="btn-group my-btn-group my-btn-group-top">
+            <button type="button" ng-disabled="readOnly" class="btn my-group-btn my-group-btn-off">MIETE</button>
+            <button type="button" ng-disabled="readOnly" class="btn my-group-btn my-group-btn-on">VERKAUF</button>
+          </div>
+          <div style="height:1px"></div>
+          <div class="btn-group my-btn-group my-btn-group-bottom">
+              
+                <button type="button" ng-disabled="readOnly" class="btn my-group-btn my-group-btn-on auto-width">DISPOSITION</button>
+                <button type="button" ng-disabled="readOnly" class="btn my-group-btn my-group-btn-off auto-width">BEAUFTRAGT</button>	
+                
+          </div>
+      </div>
+        <br>
+      <div class="text-center" >Nr:1054-01</div>
+      <div class="title-bold text-center link">MAGIC FX B.V.</div>  
+      <br>
+      <div class="text-center link" >Schönhauser Allee 169</div>
+      <div class="text-center link" >10435 Berlin</div>
+      <div class="text-center" >Tel:&nbsp;<a href="tel:00493040056570" target="_blank" >+49 30 400 565 70</a></div>
+      <div class="text-center" >Email:&nbsp;<a href="mailto:info@keenley.com" target="_blank" >info@keenley.com</a></div>
+      <div class="text-center" >URL:&nbsp;<a href="www.keenley.com" target="_blank" >www.keenley.com</a></div>
+      <div style="height:20px"></div>
+      
+      <div style="height:20px"></div>
+      <ngb-accordion  activeIds="static-1" >
+        <ngb-panel id="static-1" >
+          <ng-template ngbPanelTitle>
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 text-center">Zeitraum</div>
+                <div class="col-4 text-right" ><i class="fa fa-angle-right" ></i></div>
+              </div>
+          </ng-template>
+          <ng-template ngbPanelContent >
+                <div class="row" >
+                    <div class="col-4 text-left">Dispo</div>
+                    <div class="col-4 text-center">09.04.2018 09:00</div>
+                    <div class="col-4 text-right">11.04.2018 18:00</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-4 text-left">Event</div>
+                    <div class="col-4 text-center">09.04.2018 09:00</div>
+                    <div class="col-4 text-right">11.04.2018 18:00</div>
+                  </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel  >
+            <ng-template ngbPanelTitle>
+                <div class="row">
+                  <div class="col-4"></div>
+                  <div class="col-4 text-center">Adressen</div>
+                  <div class="col-4 text-right" ><i class="fa fa-angle-right" ></i></div>
+                </div>
+            </ng-template>
+            <ng-template ngbPanelContent >
+                  <div class="text-center">
+                      <div class="bold">Lieferadresse</div>
+                      <div>1 & 1 Internet AG</div>
+                      <div class="link">Eigendorfer Str. 57</div>
+                      <div class="link">56410 Montabaur</div>
+                      <div class="link">GERMANY</div>
+                  </div>
+                  <hr>
+                  <div class="text-center">
+                      <div class="bold">Lieferadresse</div>
+                      <div>1 & 1 Internet AG</div>
+                      <div class="link">Eigendorfer Str. 57</div>
+                      <div class="link">56410 Montabaur</div>
+                      <div class="link">GERMANY</div>
+                  </div>
+            </ng-template>
+          </ngb-panel>
+          <ngb-panel  >
+              <ng-template ngbPanelTitle>
+                  <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4 text-center">Gsamtliste</div>
+                    <div class="col-4 text-right" style="font-family: myriad-set-pro-thin;">[9]&nbsp;&nbsp;<i class="fa fa-angle-right" ></i></div>
+                  </div>
+              </ng-template>
+              <ng-template ngbPanelContent >
+                    body
+                
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+          <br>
+            <div class="prices">
+                <div class="row">
+                    <div class="col-6 text-left">Gesamtpreis Netto</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Verkauf</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Miete</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Transport</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Service</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Versicherung</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Rabatt</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Mehrwertsteuer 19%</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">Gesamtpreis Brutto</div>
+                    <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                </div>
+            </div>
+            <br>
+            <ngb-accordion>
+                <ngb-panel >
+                    <ng-template ngbPanelTitle>
+                        <div class="row">
+                            <div class="col-4"></div>
+                            <div class="col-4 text-center">Personal</div>
+                            <div class="col-4 text-right" style="font-family: myriad-set-pro-thin;">[9]&nbsp;&nbsp;<i class="fa fa-angle-right" ></i></div>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="row">
+                            <div class="col-6 text-left">crew chief</div>
+                            <div class="col-6 text-right">Born-Sabottka, Katja</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-6 text-left">Technician</div>
+                            <div class="col-6 text-right">Kotte, Franz</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-6 text-left">Technician</div>
+                            <div class="col-6 text-right">Möbius, Leander</div>
+                        </div>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel >
+                    <ng-template ngbPanelTitle>
+                        <div class="row">
+                            <div class="col-4 "></div>
+                            <div class="col-4 text-center">Anmietungen</div>
+                            <div class="col-4 text-right" style="font-family: myriad-set-pro-thin;">[9]&nbsp;&nbsp;<i class="fa fa-angle-right" ></i></div>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="row">
+                            <div class="col-4 text-left">10</div>
+                            <div class="col-4 text-center">Evolution Gerb 19mm 15s10'</div>
+                            <div class="col-4 text-right">A & M Schrauben-Handelsgesellschaft mbH</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-4 text-left">10</div>
+                            <div class="col-4 text-center">Evolution Gerb 19mm 15s10'</div>
+                            <div class="col-4 text-right">A & M Schrauben-Handelsgesellschaft mbH</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-4 text-left">10</div>
+                            <div class="col-4 text-center">Evolution Gerb 19mm 15s10'</div>
+                            <div class="col-4 text-right">A & M Schrauben-Handelsgesellschaft mbH</div>
+                        </div>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel >
+                  <ng-template ngbPanelTitle>
+                      <div class="row">
+                          <div class="col-4"></div>
+                          <div class="col-4 text-center">Notizen</div>
+                          <div class="col-4 text-right" style="font-family: myriad-set-pro-thin;"><i class="fa fa-angle-right" ></i></div>
+                      </div>
+                  </ng-template>
+                  <ng-template ngbPanelContent>
+                  <div class="row">
+                    <div class="col">
+                      Positiv<br>
+                      <div class="notes">positiv<br>positiv<br>positiv<br>positiv<br>positiv<br>positiv<br></div>
+                    </div>
+                    <div class="col">
+                        Negativ<br>
+                        <div class="notes">Negativ<br>Negativ<br>Negativ<br>Negativ<br>Negativ<br></div>
+                      </div>
+                  </div>
+                  </ng-template>
+              </ngb-panel>
+          </ngb-accordion>
+      
+    </div>
+  </main>

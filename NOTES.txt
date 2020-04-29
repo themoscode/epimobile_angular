@@ -1,0 +1,17 @@
+
+Nebular
+https://github.com/akveo/nebular
+
+
+Search Sort Pagination in Angular 4 
+
+https://ciphertrick.com/2017/08/01/search-sort-pagination-in-angular/
+
+
+change pagination to https://ng-bootstrap.github.io/#/components/pagination/examples
+---------------------------------------------------------------------------------------------
+
+pass data to modal, form in modal
+https://itnext.io/creating-forms-inside-modals-with-ng-bootstrap-221e4f1f5648
+
+

@@ -1,0 +1,103 @@
+.my-btn-group.my-btn-group-top .my-group-btn {
+width: 200px;
+background: #E9A457;
+color:white;
+border-color:#E9A457;
+}
+
+.my-btn-group.my-btn-group-bottom .my-group-btn {
+width: 100px;
+}
+
+
+.my-list .block .contact {
+padding-left:5px;
+padding-right:5px;
+font-size: 18px;
+}
+
+.dot{
+border-radius: 15px;
+width: 29px;
+height: 29px;
+background-color: black;
+color: white;
+font-size: 14px;
+font-family: myriad-set-pro-text;
+padding-top:2px
+} 
+
+
+.dot-group .dot {
+margin-right: 20px;
+display: inline-block;
+cursor: pointer;
+
+}
+
+.dot-group .order_no {
+margin-right: 20px;
+display: inline-block;
+cursor: pointer;
+padding-bottom:5px;
+}
+
+
+.dot.dot_green {
+background-color: #1ab307;
+border:2px solid #1ab307;
+}
+
+.dot.dot_orange {
+background-color: orange;
+border:2px solid orange;
+}
+
+.dot.dot_yellow {
+background-color: yellow;
+border:2px solid yellow;
+color:black
+}
+
+.dot.dot_red {
+background-color: red;
+border:2px solid red;
+}
+
+.dot.dot_greyoutline{
+border:2px solid gray;
+background-color: transparent;
+color:black;
+
+}
+
+
+@media (max-width:515px) and (min-width:407px) {   
+    .dot-group .dot  {
+      font-size: 12px;
+      margin-right: 10px;
+      width:25px;
+      height:25px
+      }
+
+    .dot-group .order_no{
+  margin-right: 10px;
+      
+    }
+    
+  }
+
+@media (max-width:406px) {   
+  .dot-group .dot  {
+    font-size: 10px;
+    margin-right: 3px;
+    width:20px;
+    height:20px
+    }
+
+  .dot-group .order_no{
+    margin-right: 3px;
+    
+  }
+  
+} 

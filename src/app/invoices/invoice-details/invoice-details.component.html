@@ -1,0 +1,119 @@
+
+  <header>
+      <div class="container-fluid my-panel-header text-center">
+        <app-panel-header></app-panel-header>
+        <div class="row my-btn-group2" >
+          <div class="col-2 siteTitleTool disabled text-right">
+            <span class="fa fa-pencil" ></span>
+          </div>
+          <div class="col-8 text-center siteTitle">
+              <span class="pointer siteTitle2">Rechnungen</span>
+          </div>
+          <div class="col-2 siteTitleTool disabled text-left">
+              <span class="fa fa-plus"></span>
+            </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container" >
+          <input type="search" class="form-control searchBox text-center"  placeholder="Suche..."   />
+          <div style="height:44px"></div>
+        <div class="text-center">
+            <div class="btn-group my-btn-group my-btn-group-top">
+              <button type="button" ng-disabled="readOnly" class="btn my-group-btn my-group-btn-off">MIETE</button>
+              <button type="button" ng-disabled="readOnly" class="btn my-group-btn my-group-btn-on">VERKAUF</button>
+            </div>
+            
+        </div>
+          <br>
+        <div class="text-center" >Nr:1054-01</div>
+        <div class="title-bold text-center link">MAGIC FX B.V.</div>  
+        <br>
+        <div class="text-center link" >Schönhauser Allee 169</div>
+        <div class="text-center link" >10435 Berlin</div>
+        <div class="text-center" >Tel:&nbsp;<a href="tel:00493040056570" target="_blank" >+49 30 400 565 70</a></div>
+        <div class="text-center" >Email:&nbsp;<a href="mailto:info@keenley.com" target="_blank" >info@keenley.com</a></div>
+        <div class="text-center" >URL:&nbsp;<a href="www.keenley.com" target="_blank" >www.keenley.com</a></div>
+        <div style="height:20px"></div>
+        
+        <div style="height:20px"></div>
+           <ngb-accordion  activeIds="static-1" >
+            <ngb-panel id="static-1" >
+            <ng-template ngbPanelTitle>
+                <div class="row">
+                  <div class="col-4"></div>
+                  <div class="col-4 text-center">Zeitraum</div>
+                  <div class="col-4 text-right" ><i class="fa fa-angle-right" ></i></div>
+                </div>
+            </ng-template>
+            <ng-template ngbPanelContent >
+                  <div class="row" >
+                      <div class="col-4 text-left">Dispo</div>
+                      <div class="col-4 text-center">09.04.2018 09:00</div>
+                      <div class="col-4 text-right">11.04.2018 18:00</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-4 text-left">Event</div>
+                      <div class="col-4 text-center">09.04.2018 09:00</div>
+                      <div class="col-4 text-right">11.04.2018 18:00</div>
+                    </div>
+                    <hr>
+                    <div class="status text-center">
+                            <div class="false">nicht gebucht</div>
+                            <div class="false">nicht vollbezahlt</div>
+                    </div>
+                    
+            </ng-template>
+            </ngb-panel>
+          
+            <ngb-panel  >
+                <ng-template ngbPanelTitle>
+                    <div class="row">
+                      <div class="col-4"></div>
+                      <div class="col-4 text-center">Gsamtliste</div>
+                      <div class="col-4 text-right" style="font-family: myriad-set-pro-thin;"><i class="fa fa-angle-right" ></i></div>
+                    </div>
+                </ng-template>
+                <ng-template ngbPanelContent >
+                     <div class="row">
+                         <div class="col-6 text-left">1 Stk.(type:0)</div>
+                         <div class="col-6 text-right">°LFM Nozzle 544.480</div>
+                     </div>
+                     <hr>
+                     
+                    <div class="prices">
+                        <div class="row">
+                            <div class="col-6 text-left">Gesamtpreis Netto</div>
+                            <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">Mehrwertsteuer 19%</div>
+                            <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">Gesamtpreis Brutto</div>
+                            <div class="col-6 text-right bold color-535353">1.420,62 €</div>
+                        </div>
+                    </div>
+                    
+                </ng-template>
+              </ngb-panel>
+            
+                <ngb-panel >
+                <ng-template ngbPanelTitle>
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-4 text-center">Notizen</div>
+                        <div class="col-4 text-right" style="font-family: myriad-set-pro-thin;"><i class="fa fa-angle-right" ></i></div>
+                    </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    notes....
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+        
+      </div>
+    </main>

@@ -1,0 +1,57 @@
+
+  <!-- telephone -->
+  <div class="row" *ngFor="let row of communicationData | filterBy : {type:0}">
+        <div class="col-4"><span>{{communicationTypes[row.type].title}}:</span></div>
+        <div class="col-8 text-right">
+            
+            <div  ><a href="tel:{{row.phone_match_number}}" >{{row.uplink}}</a></div>
+        </div>
+    </div>
+    <!-- fax -->
+    <div class="row" *ngFor="let row of communicationData | filterBy : {type:1}">
+        <div class="col-4"><span>{{communicationTypes[row.type].title}}:</span></div>
+        <div class="col-8 text-right">
+            
+            <div  >{{row.uplink}}</div>
+        </div>
+    </div>
+    <!-- Mobiltelefon -->
+    <div class="row" *ngFor="let row of communicationData | filterBy : {type:2}">
+        <div class="col-4"><span>{{communicationTypes[row.type].title}}:</span></div>
+        <div class="col-8 text-right">
+            
+            <div  ><a href="tel:{{row.phone_match_number}}" >{{row.uplink}}</a></div>
+        </div>
+    </div>
+    <!-- E-mail -->
+    <div class="row" *ngFor="let row of communicationData | filterBy : {type:3}">
+        <div class="col-4"><span>{{communicationTypes[row.type].title}}:</span></div>
+        <div class="col-8 text-right">
+            
+            <div  ><a href="mailto:{{row.uplink}}" >{{row.uplink}}</a></div>
+        </div>
+    </div>
+    <!-- E-Webseite -->
+    <div class="row" *ngFor="let row of communicationData | filterBy : {type:4}">
+        <div class="col-4"><span>{{communicationTypes[row.type].title}}:</span></div>
+        <div class="col-8 text-right">
+            
+            <div  ><a href="http://{{row.uplink}}" target="_blank">{{row.uplink}}</a></div>
+        </div>
+    </div>
+    <!-- chat -->
+    <div class="row" *ngFor="let row of communicationData | filterBy : {type:5}">
+        <div class="col-4"><span>{{communicationTypes[row.type].title}}:</span></div>
+        <div class="col-8 text-right">
+            
+            <div  >{{row.uplink}}</div>
+        </div>
+    </div>
+    <!-- sonstiges -->
+    <div class="row" *ngFor="let row of communicationData | filterBy : {type:6}">
+        <div class="col-5"><span>{{communicationTypes[row.type].title}}:</span></div>
+        <div class="col-7 text-right">
+            
+            <div  >{{row.uplink}}</div>
+        </div>
+    </div>

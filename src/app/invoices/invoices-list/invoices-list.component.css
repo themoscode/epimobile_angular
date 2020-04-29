@@ -1,0 +1,79 @@
+.my-btn-group.my-btn-group-top .my-group-btn {
+    width: 200px;
+    background: #8CB0E6;
+    color:white;
+    border-color:#8CB0E6;
+    }
+    
+    .my-btn-group.my-btn-group-bottom .my-group-btn {
+    width: 100px;
+    }
+    
+    
+    .my-list .block .contact {
+    padding-left:5px;
+    padding-right:5px;
+    font-size: 18px;
+    }
+    
+    .dot{
+    border-radius: 15px;
+    width: 29px;
+    height: 29px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family: myriad-set-pro-text;
+    padding-top:2px
+    } 
+    
+    
+    .dot-group .dot {
+    display: inline-block;
+    cursor: pointer;
+    }
+    
+    .dot-group .order_no {
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom:5px;
+    }
+    
+    .dot-group .center{
+        margin-right:60px;
+        margin-left:60px;
+    }
+    
+    .dot.dot_green {
+    background-color: #1ab307;
+    border:2px solid #1ab307;
+    }
+    
+    .dot.dot_orange {
+    background-color: orange;
+    border:2px solid orange;
+    }
+    
+    .dot.dot_yellow {
+    background-color: yellow;
+    border:2px solid yellow;
+    color:black
+    }
+    
+    .dot.dot_red {
+    background-color: red;
+    border:2px solid red;
+    }
+    
+    .dot.dot_greyoutline{
+    border:2px solid gray;
+    background-color: transparent;
+    color:black;
+    
+    }
+    
+    
+   
+    
+   
+    

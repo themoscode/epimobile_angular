@@ -1,0 +1,91 @@
+<header>
+  <div class="container-fluid my-panel-header text-center">
+    <app-panel-header></app-panel-header>
+    <div class="row my-btn-group2" >
+        <div class="col-2"></div>
+        <div class="col-8 text-center siteTitle">
+          Aufgaben
+        </div>
+        <div class="col-2 siteTitleTool disabled text-left">
+            <span class="fa fa-plus"></span>
+        </div>
+      </div>
+  </div>
+</header>
+<main>
+  <div class="container" >
+      <input type="search" class="form-control searchBox text-center"  placeholder="Suche..."   />
+      <div style="height:21px"></div>
+      
+      <div class="text-center">
+          <div class="btn-group my-btn-group">
+            
+            <button type="button" class="btn my-group-btn auto-width" [ngClass]="{'my-group-btn-on':daysFilter,'my-group-btn-off':!daysFilter}" (click)="setDays('reset')" >Heute</button>
+            
+            <button type="button" class="btn my-group-btn my-group-btn-smaller auto-width" [ngClass]="{'my-group-btn-on':searchFilters.days!=0,'my-group-btn-off':searchFilters.days==0}" (click)="setDays('dec')"><span class="fa fa-minus"></span></button>	
+            <button type="button" class="btn my-group-btn auto-width" [ngClass]="{'my-group-btn-on':searchFilters.days!=0,'my-group-btn-off':searchFilters.days==0}" >{{searchFilters.days}}</button>	
+            <button type="button" class="btn my-group-btn my-group-btn-smaller auto-width" [ngClass]="{'my-group-btn-on':searchFilters.days!=0,'my-group-btn-off':searchFilters.days==0}" (click)="setDays('inc')"><span class="fa fa-plus"></span></button>	
+          
+          </div>
+      </div>
+      
+      <br>
+      <div class="search_results_label text-center" >
+        <div class="found" >
+          {{getTasks.length}} Einträge gefunden
+        </div>
+        <div *ngIf="1 === 2" class="notFound" >Keine Einträge gefunden</div>
+      </div>
+      <br>
+    <!--
+      <div class="row text-center">
+        <div class="col-4 text-left"><span class="fa fa-arrow-circle-left my-arrow-left-btn pointer"  ></span></div>
+        <div class="col-4"><span class="my-paging-label" >Seite 1 von 10</span></div>
+        <div class="col-4 text-right"><span class="fa fa-arrow-circle-right my-arrow-right-btn pointer"  ></span></div>
+      </div>
+    -->
+    <div class="pagination_container">
+      <pagination-controls class="my-pagination"
+          
+          (pageChange)="p = $event"
+          directionLinks="true"
+          previousLabel=""
+          nextLabel="">
+          
+      </pagination-controls>
+    </div>
+      <div style="height:21px"></div>
+      <div class="text-left my-list" >
+       <!-- 
+        <div class="text-center pointer block" routerLink="/task/1">            
+          <div>
+              <span class="title-bold" >Donnerstag</span><br>
+              <span>15.03.2018 05:00 - 10:00 Uhr</span>
+          </div>
+          <div style="word-break: break-all;">text text text text text text text text text text text text </div>
+          <div style="color:orange" class="title-bold">1 & 1 Internet AG</div>
+        </div>
+      -->
+        <div class="text-center pointer block" routerLink="/task/1" *ngFor="let row of getTasks | paginate: { itemsPerPage: itemsPerPage, currentPage: p };">          
+          <div *ngIf="row.date_start!=row.date_end">
+
+            <span class="title-bold" >{{services.tools.dayNameFrom4d(row.date_start)}}</span><br>
+            <span *ngIf="row.is_private">[P]&nbsp;</span><span>{{services.tools.dateFrom4d(row.date_start)}} {{services.tools.hoursMins(row.time_start).hours}}:{{services.tools.hoursMins(row.time_start).mins}} </span>
+            -
+            <span>{{services.tools.dateFrom4d(row.date_end)}} {{services.tools.hoursMins(row.time_end).hours}}:{{services.tools.hoursMins(row.time_end).mins}} Uhr</span>
+          </div>
+          <div *ngIf="row.date_start==row.date_end">
+              <span class="title-bold" >{{services.tools.dayNameFrom4d(row.date_start)}}</span><br>
+              <span *ngIf="row.is_private">[P]&nbsp;</span><span>{{services.tools.dateFrom4d(row.date_start)}} {{services.tools.hoursMins(row.time_start).hours}}:{{services.tools.hoursMins(row.time_start).mins}} </span>
+              -
+              <span>{{services.tools.hoursMins(row.time_end).hours}}:{{services.tools.hoursMins(row.time_end).mins}} Uhr</span>
+          </div>
+          <div style="word-break: break-all;">{{row.text}}</div>
+          <div style="color:orange" class="title-bold">{{row.contact_name}}</div>
+        </div>
+
+
+        
+    </div>
+  </div>
+</main>

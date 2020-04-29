@@ -1,0 +1,84 @@
+<header>
+  <div class="container-fluid my-panel-header text-center">
+    <app-panel-header></app-panel-header>
+    <div class="row my-btn-group2" >
+        <div class="col-2"></div>
+        <div class="col-8 text-center siteTitle">
+          Artikel
+        </div>
+        <div class="col-2 siteTitleTool disabled text-left">
+            <span class="fa fa-plus"></span>
+        </div>
+      </div>
+  </div>
+</header>
+<main>
+  <div class="container" >
+    <input type="search" class="form-control searchBox text-center"  placeholder="Suche..."   />
+  
+    <div style="height:21px"></div>
+    <div class="text-center">
+      <div class="btn-group my-btn-group my-btn-group-top" >
+          <button type="button" class="btn my-group-btn invoice_css" (click)="openModalSelectDates()">Zeitraum wählen</button>               
+      </div>
+      <div style="height:1px"></div>
+      <div class="btn-group my-btn-group my-btn-group-bottom">
+              
+          <button type="button" class="btn my-group-btn" [ngClass]="{'my-group-btn-on': searchFilters.isRent, 'my-group-btn-off': !searchFilters.isRent}" (click)="searchFilters.toggleRentStatus()" >MIETE</button>
+          <button type="button" class="btn my-group-btn" [ngClass]="{'my-group-btn-on': searchFilters.isSell, 'my-group-btn-off': !searchFilters.isSell}" (click)="searchFilters.toggleSellStatus()" >VERKAUF</button>	
+              
+      </div>
+    </div>
+      
+      <br>
+      <div class="search_results_label text-center" >
+        <div class="found" >
+          {{getProducts.length}} Einträge gefunden
+        </div>
+        <div *ngIf="1 === 2" class="notFound" >Keine Einträge gefunden</div>
+      </div>
+      <br>
+      <!--
+      <div class="row text-center">
+              <div class="col-4 text-left"><span class="fa fa-arrow-circle-left my-arrow-left-btn pointer"  ></span></div>
+              <div class="col-4"><span class="my-paging-label">Seite 1 von 10</span></div>
+              <div class="col-4 text-right"><span class="fa fa-arrow-circle-right my-arrow-right-btn pointer"  ></span></div>
+      </div>
+    -->
+    <div class="pagination_container">
+      <pagination-controls class="my-pagination"
+          
+          (pageChange)="p = $event"
+          directionLinks="true"
+          previousLabel=""
+          nextLabel="">
+          
+      </pagination-controls>
+    </div>
+      <div style="height:21px"></div>
+
+      <div class="input-group mb-3 sorting">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" (click)="sortBy(sortName,'change_sorting')"><i class="fa" [ngClass]="{'fa-caret-up': !sortDesc[sortName], 'fa-caret-down': sortDesc[sortName]}"></i></button>
+        </div>
+        <select class="custom-select pointer" [ngModel]="sortName" (ngModelChange)="sortBy($event)">
+            <option value="name">Name</option>
+            <option value="customer_no">Kunde</option>
+            <option value="supplier_no">Event</option>
+        </select>
+      </div>
+
+      <br><br> 
+
+      <div class="text-left my-list" >
+        
+        <div  class="pointer block" style="border-bottom:1px solid #dddddd;padding-top:8px" routerLink="/product/1" *ngFor="let row of getProducts | orderBy: sortName : sortDesc[sortName] | paginate: { itemsPerPage: itemsPerPage, currentPage: p };">
+          <div class="text-center bold link pointer" >{{row.name}}</div>
+          <div class="text-center">{{row.product_no}}<span *ngIf="row._stock_data_length>0">&nbsp;Bestand: {{row.stock_data[0].stock_total}}</span></div>
+        </div>
+        
+      </div>
+      
+
+  </div>
+</main>

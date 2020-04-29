@@ -1,0 +1,35 @@
+
+<div class="text-center">
+	<br>
+	<img src="assets/img/icons/epimobilelogo.png"  class="logo">
+	<br><br><h3>Willkommen bei epirent mobile</h3>
+	<div class="container" >
+		<br>
+		<div class="row">
+			<div class="col-sm-4 col-2"></div>
+			<div class="col-sm-4 col-8">
+          
+					
+					<form (submit)="loginUser($event)" >
+						<div class="form-group">
+						
+							<input type="text" name="username" id="username" placeholder="Username" class="form-control" ng-model="username" required/>
+						</div>
+						<div class="form-group">
+							
+							<input type="password" name="password" id="password" placeholder="Password" class="form-control" ng-model="password"  />
+						</div>
+						<br>
+						<div class="form-actions">
+							<button type="submit"  class="my-act-btn pointer" >Login</button>
+						</div>
+					</form>
+			
+			</div>
+			
+			<div class="col-sm-4 col-2"></div>
+		</div>	
+	</div>
+</div>
+
+

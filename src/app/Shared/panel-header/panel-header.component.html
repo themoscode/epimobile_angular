@@ -1,0 +1,81 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <!--
+    <div class="modal-header">
+      <h4 class="modal-title">Modal title</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+     -->
+    <div class="text-center my-modal-header" >
+       <h4 class="modal-title" >Einstellungen</h4>
+       <hr>
+    </div>
+    <div class="modal-body">
+       
+        <h3 class="text-center">Sichtbarkeit der Bereiche</h3>
+        
+        <div class="row">
+          <div class="col-6 text-right"><ui-switch checked [(ngModel)]="services.common.app_settings.showTermin"></ui-switch></div>
+          <div class="col-6 text-left">Termine</div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-right"><ui-switch checked [(ngModel)]="services.common.app_settings.showAufgabe"></ui-switch></div>
+          <div class="col-6 text-left">Aufgaben</div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-right"><ui-switch checked [(ngModel)]="services.common.app_settings.showAdress"></ui-switch></div>
+          <div class="col-6 text-left">Adressen</div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-right"><ui-switch checked [(ngModel)]="services.common.app_settings.showArtikel"></ui-switch></div>
+          <div class="col-6 text-left">Artikel</div>
+        </div>
+        <div class="row">
+           <div class="col-6 text-right"><ui-switch checked [(ngModel)]="services.common.app_settings.showAuftrag"></ui-switch></div>
+           <div class="col-6 text-left">Aufträge</div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-right"><ui-switch checked [(ngModel)]="services.common.app_settings.showRechnung"></ui-switch></div>
+          <div class="col-6 text-left">Rechnungen</div>
+        </div>
+        <br>
+        <h3 class="text-center">Suchanfragen merken</h3>
+        <div class="input-group" >
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                  <span class="fa fa-minus"></span>
+              </div>
+            </div>
+            <input type="text" class="form-control" disabled>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fa fa-plus"></span>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    <!--
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c()">Close</button>
+    </div>
+  -->
+    <div class="text-center my-modal-footer" >
+        <hr>
+        <div>
+          
+          <button type="button" class="my-act-btn pointer" (click)="c()">Close</button>
+          
+        </div>
+        
+        
+    </div>
+  </ng-template>
+
+<div class="row my-btn-group1">
+    <div class="col-4 text-left" ><i class="fa fa-cog pointer" (click)="open(content)" ></i></div>
+    <div class="col-4 text-center"><img  src="assets/img/icons/epimobilelogo.png" class="epiMobileLogo" routerLink="/home"></div>
+    <div class="col-4 text-right" ><i class="fa fa-power-off pointer"  (click)="logOutUser()"></i></div>
+</div>
+

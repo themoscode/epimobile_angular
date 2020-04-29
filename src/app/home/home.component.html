@@ -1,0 +1,130 @@
+<!-- ---------------MODAL TEMPLATE--------------- -->
+<ng-template #impressum let-c="close" let-d="dismiss">
+        
+        <div class="text-center my-modal-header" >
+           <h4 class="modal-title" >Impressum</h4>
+           <hr>
+        </div>
+        <div class="modal-body text-center">
+            
+                <img src="assets/img/icons/epimobilelogo.png" class="img-responsive img-center" style="max-width: 50%">
+                <br><br>
+                EPI development<br>
+                Langhansstr. 63<br>
+                13086 Berlin<br>
+                GERMANY<br>
+                USt.-ID DE179716903<br>
+                StNr: 35/368/61581<br>
+                Vertreten durch: Frank Juling<br>
+                Tel.: <a href="tel:00493047372720" >+49 (0)30 4737272-0</a><br>
+                Fax: +49 (0)30 4737272-22<br>
+                eMail: <a href="mailto:support@epi-dev.de" >support@epi-dev.de</a><br>
+                Web: <a href="https://epi.rent" target="_blank">https://epi.rent</a>
+    
+        </div>
+        
+        <div class="text-center my-modal-footer" >
+            <hr>
+            <div>
+              
+              <button type="button" class="my-act-btn pointer" (click)="c()">Close</button>
+              
+            </div>
+            
+            
+        </div>
+      </ng-template>
+<!-- -----------------MODAL TEMPLATE---------------- -->
+
+
+
+
+<header>
+  <div class="container-fluid my-panel-header text-center">
+    <app-panel-header></app-panel-header>
+    <div class="row my-btn-group2" >
+      <div class="col text-center siteTitle">
+        epi<span>mobile</span>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+    <div class="container" >
+        <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/>
+        
+        <div class="home-panel">
+
+            
+            <div class="panel-element meetings text-center" routerLink="/meetings" *ngIf="services.common.app_settings.showTermin">
+                <div class="row" >
+                    <div class="col-2 text-left"></div>
+                    <div class="col-8 panel-header" >Termine</div>
+                    <div class="col-2 text-right panel-header2">{{meetingsLength}}</div>
+                </div>
+            </div>
+            
+            <div style="height:9px"></div>
+            <div class="panel-element tasks text-center" routerLink="/tasks" *ngIf="services.common.app_settings.showAufgabe">
+                <div class="row" >
+                    <div class="col-2 text-left"></div>
+                    <div class="col-8 panel-header" >Aufgaben</div>
+                    <div class="col-2 text-right panel-header2">{{tasksLength}}</div>
+                </div>
+            </div>
+            <div style="height:22px"></div>
+            
+            <div class="panel-element contacts text-center" routerLink="/contacts" *ngIf="services.common.app_settings.showAdress">
+                <div class="row" >
+                    <div class="col-2 text-left"></div>
+                    <div class="col-8 panel-header" >Adressen</div>
+                    <div class="col-2 text-right panel-header2">{{contactsLength}}</div>
+                </div>
+            </div>
+            <div style="height:9px"></div>
+            
+            <div class="panel-element products text-center" routerLink="/products" *ngIf="services.common.app_settings.showArtikel">
+                <div class="row" >
+                    <div class="col-2 text-left"></div>
+                    <div class="col-8 panel-header" >Artikel</div>
+                    <div class="col-2 text-right panel-header2">{{productsLength}}</div>
+                </div>
+            </div>
+            <div style="height:22px"></div>
+            <div class="panel-element orders text-center" routerLink="/orders" *ngIf="services.common.app_settings.showAuftrag">
+                <div class="row" >
+                    <div class="col-2 text-left"></div>
+                    <div class="col-8 panel-header" >Auftrag</div>
+                    <div class="col-2 text-right panel-header2">{{ordersLength}}</div>
+                </div>
+            </div>
+            <div style="height:9px"></div>
+            <div class="panel-element invoices text-center" routerLink="/invoices" *ngIf="services.common.app_settings.showRechnung">
+                <div class="row" >
+                    <div class="col-2 text-left"></div>
+                    <div class="col-8 panel-header" >Rechnung</div>
+                    <div class="col-2 text-right panel-header2">{{invoicesLength}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    
+    <div class="text-center">
+        {{loggedUserData.fullname}}<br> 
+        {{loggedUserData.selectedMandantName}} / {{loggedUserData.selectedLagerName}}<br>
+        {{today | date:'fullDate':'':'de'}}
+        <br><br>
+        <i class="fa fa-info-circle pointer" style="font-size: 48px;" (click)="open(impressum)"></i>   
+    </div>
+    
+    
+</main>
+
+
+
+
+
+
+
+

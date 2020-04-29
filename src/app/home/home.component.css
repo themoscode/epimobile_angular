@@ -1,0 +1,64 @@
+header .my-panel-header .siteTitle span{
+font-family: myriad-set-pro-ultralight;
+}
+
+
+
+.home-panel{
+    margin-top:25px
+}
+
+.home-panel .panel-element{
+    xbackground:#517C85;
+    xborder:1px solid ;
+    border-radius:10px;
+    height:54px
+}
+
+.home-panel .panel-element .panel-header,
+.home-panel .panel-element .panel-header2{
+
+    color:white;
+    padding-top:7px;
+    font-size:25px
+}
+
+
+.home-panel .panel-element .panel-header{
+    
+    cursor:pointer;
+    font-family:myriad-set-pro-text;
+    
+}
+
+.home-panel .panel-element .panel-header2 {
+
+    font-family: myriad-set-pro-ultralight;
+    padding-top: 7px;
+    padding-right:30px
+
+}
+
+.meetings,
+.tasks{
+    background:#517C85;
+    
+}
+
+.contacts,
+.products{
+    background:#3DA264;
+    
+}
+
+.orders{
+    background:#E9A457;
+    
+}
+
+.invoices{
+    background:#8CB0E6;
+   
+}
+
+

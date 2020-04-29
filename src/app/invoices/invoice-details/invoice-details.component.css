@@ -1,0 +1,58 @@
+
+.status{
+    font-size: 18px;
+    font-family: myriad-set-pro-thin;
+}
+
+.true{
+    color: green;
+}
+
+.false {
+    color:red;
+}
+
+.prices {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+.my-btn-group.my-btn-group-top .my-group-btn:first-child {
+    width:115px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.my-btn-group.my-btn-group-top .my-group-btn:last-child {
+    width: 117px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+/deep/ .card-header  {
+    background-color: #8CB0E6;
+    text-align: center;
+    height: 37px;
+    padding-top: 6px;
+    font-family: myriad-set-pro-bold;
+    font-size: 17px;
+    
+
+  }
+
+  /deep/ .card-header:first-child  {
+    xborder-radius: 6px;
+    
+  }
+
+  /deep/ .card-header a  {
+    color:white;
+    text-decoration:none;
+    }
+  
+    /deep/ .card-body {
+        font-size: 16px;
+        font-family: myriad-set-pro-text;
+    }  
+
+    

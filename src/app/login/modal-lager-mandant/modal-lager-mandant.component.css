@@ -1,0 +1,21 @@
+.my-modal-header{
+    padding-top:15px
+}
+
+.my-modal-header .modal-title{
+    font-family:myriad-set-pro-bold
+}
+
+
+.modal-body h3 {
+    font-size:15px;
+    margin-bottom:10px
+}
+
+.my-modal-footer {
+    padding-bottom:15px
+}
+
+.my-modal-footer > div{
+    padding:15px
+}

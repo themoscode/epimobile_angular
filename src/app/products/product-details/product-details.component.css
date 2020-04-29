@@ -1,0 +1,27 @@
+/deep/ .card-header  {
+    background-color: #3DA264;
+    text-align: center;
+    height: 37px;
+    padding-top: 6px;
+    font-family: myriad-set-pro-bold;
+    font-size: 17px;
+    
+
+  }
+
+  /deep/ .card-header:first-child  {
+    xborder-radius: 6px;
+    
+  }
+
+  /deep/ .card-header a  {
+    color:white;
+    text-decoration:none;
+    }
+  
+    /deep/ .card-body {
+        font-size: 16px;
+        font-family: myriad-set-pro-text;
+    }  
+
+    

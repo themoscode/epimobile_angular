@@ -1,0 +1,111 @@
+<!-- ---------------MODAL TEMPLATE--------------- -->
+<ng-template #participant let-c="close" let-d="dismiss">
+        
+  <div class="text-center my-modal-header" >
+     <h4 class="modal-title" >Teilnehmer</h4>
+     <hr>
+  </div>
+  <div class="modal-body text-center">
+      
+   
+   <div class="text-left my-list" >
+                        
+        <div class="list-group-item no-pointer" *ngFor="let row of data.participant;">
+        
+            
+                {{row.user_name}}
+           
+            
+        </div>
+    
+    
+    </div>
+          
+  </div>
+  <div class="text-center my-modal-footer" >
+      <hr>
+      <div>
+        
+        <button type="button" class="my-act-btn pointer" (click)="c()">Close</button>
+        
+      </div>
+      
+      
+  </div>
+</ng-template>
+<!-- -----------------MODAL TEMPLATE---------------- -->
+<header>
+  <div class="container-fluid my-panel-header text-center">
+    <app-panel-header></app-panel-header>
+    <div class="row my-btn-group2" >
+        <div class="col-2 siteTitleTool disabled text-right">
+          <span class="fa fa-pencil" ></span>
+        </div>
+        <div class="col-8 text-center siteTitle">
+            <span class="pointer siteTitle2">Aufgaben</span>
+        </div>
+        <div class="col-2 siteTitleTool disabled text-left">
+            <span class="fa fa-plus"></span>
+          </div>
+      </div>
+  </div>
+</header>
+<main>
+  <div class="container" >
+      <input type="search" class="form-control searchBox text-center"  placeholder="Suche..."   />
+      <br>
+      <div class="text-center" >          
+          <!--   
+            <div>
+                <span class="title-bold" >Donnerstag</span><br>
+                <span>15.03.2018 05:00 - 10:00 Uhr</span>
+            </div>
+          -->
+          <div *ngIf="data.is_start_date && !data.is_end_date" >
+            <span class="title-bold" >{{services.tools.dayNameFrom4d(data.date_start)}}</span><br>
+            <span >{{services.tools.dateFrom4d(data.date_start)}} {{services.tools.hoursMins(data.time_start).hours}}:{{services.tools.hoursMins(data.time_start).mins}} Uhr</span>
+          </div>
+          <div *ngIf="data.is_start_date && data.is_end_date" >
+              <div *ngIf="data.date_start!=data.date_end">
+                      <span class="title-bold" >{{services.tools.dayNameFrom4d(data.date_start)}}</span><br>
+                      <span>{{services.tools.dateFrom4d(data.date_start)}} {{services.tools.hoursMins(data.time_start).hours}}:{{services.tools.hoursMins(data.time_start).mins}} </span>
+                      -
+                      <span>{{services.tools.dateFrom4d(data.date_end)}} {{services.tools.hoursMins(data.time_end).hours}}:{{services.tools.hoursMins(data.time_end).mins}} Uhr</span>
+              </div>
+              <div *ngIf="data.date_start==data.date_end">
+                      <span class="title-bold" >{{services.tools.dayNameFrom4d(data.date_start)}}</span><br>
+                      <span>{{services.tools.dateFrom4d(data.date_start)}} {{services.tools.hoursMins(data.time_start).hours}}:{{services.tools.hoursMins(data.time_start).mins}} </span>
+                      -
+                      <span>{{services.tools.hoursMins(data.time_end).hours}}:{{services.tools.hoursMins(data.time_end).mins}} Uhr</span>
+              </div>
+          
+          </div>
+          
+          <div style="height:21px"></div>
+          <div>
+                  
+              <div ng-show="data.contact_name != ''" class="title-bold pointer link">{{data.contact_name}}<br></div>
+              <div class="title-bold" style="word-break: break-all;">{{data.text}}</div>
+
+
+          </div>
+          <div style="height:21px"></div>
+
+       
+      </div>  
+   
+  
+    <ngb-accordion (panelChange)="beforeChange($event)" activeIds="static-1" >
+      <ngb-panel id="static-1" title="Notizen">
+        <ng-template ngbPanelContent>
+          <div style="height:220px">
+            {{data.notes}}
+          </div>
+        </ng-template>
+      </ngb-panel>
+      
+    </ngb-accordion>
+
+    <button class="my-act-btn pointer" (click)="open(participant)">Teilnehmer</button>
+  </div>
+</main>

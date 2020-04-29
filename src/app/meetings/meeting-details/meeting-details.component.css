@@ -1,0 +1,53 @@
+.meeting_txt{
+    font-family: myriad-set-pro-bold;
+    font-size: 24px;
+}
+
+
+.meeting_txt.contact_name{
+    color:orange;
+}
+
+ /deep/ .card-header  {
+    background-color: #517C85;
+    text-align: center;
+    height: 37px;
+    padding-top: 6px;
+    font-family: myriad-set-pro-bold;
+    font-size: 17px;
+    
+
+  }
+
+  /deep/ .card-header:first-child  {
+    xborder-radius: 6px;
+    
+  }
+
+  /deep/ .card-header a  {
+    color:white;
+    text-decoration:none;
+    }
+  
+    /deep/ .card-body {
+        font-size: 16px;
+        font-family: myriad-set-pro-text;
+    }  
+
+
+  /*
+    
+
+    /deep/ .card {
+  border: none;
+}
+
+/deep/ .card-header {
+  margin-top: 0.75em !important;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/deep/ .card-block {
+  text-align: left
+}
+  */

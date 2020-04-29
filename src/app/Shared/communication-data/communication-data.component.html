@@ -1,0 +1,30 @@
+<div class="text-center">
+    <!-- tel -->
+    <div *ngFor="let row of communicationData | filterBy : {type:0}" >
+        <div><b>{{communicationTypes[row.type].title}}<!--{{$index+1}}--></b>:&nbsp;<a href="tel:{{row.phone_match_number}}" >{{row.uplink}}</a></div>
+    </div>
+    <!-- fax -->
+    <div *ngFor="let row of communicationData | filterBy : {type:1}" >
+            <div><b>{{communicationTypes[row.type].title}}<!--{{$index+1}}--></b>:&nbsp;{{row.uplink}}</div>
+    </div>
+    <!-- Mobiltelefon -->
+    <div *ngFor="let row of communicationData | filterBy : {type:2}" >
+            <div><b>{{communicationTypes[row.type].title}}<!--{{$index+1}}--></b>:&nbsp;<a href="tel:{{row.phone_match_number}}" >{{row.uplink}}</a></div>
+    </div>
+    <!-- E-mail -->
+    <div *ngFor="let row of communicationData | filterBy : {type:3}" >
+            <div><b>{{communicationTypes[row.type].title}}<!--{{$index+1}}--></b>:&nbsp;<a href="mailto:{{row.uplink}}" >{{row.uplink}}</a></div>
+    </div>
+    <!-- Webseite -->
+    <div *ngFor="let row of communicationData | filterBy : {type:4}" >
+            <div><b>{{communicationTypes[row.type].title}}<!--{{$index+1}}--></b>:&nbsp;<a href="http://{{row.uplink}}" target="_blank">{{row.uplink}}</a></div>
+    </div>
+    <!-- Chat -->
+    <div *ngFor="let row of communicationData | filterBy : {type:5}" >
+            <div><b>{{communicationTypes[row.type].title}}<!--{{$index+1}}--></b>:&nbsp;{{row.uplink}}</div>
+    </div>
+    <!-- sonstiges -->
+    <div *ngFor="let row of communicationData | filterBy : {type:6}" >
+            <div><b>{{communicationTypes[row.type].title}}<!--{{$index+1}}--></b>:&nbsp;{{row.uplink}}</div>
+    </div>
+  </div>

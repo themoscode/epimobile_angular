@@ -1,0 +1,741 @@
+/*******************************************************************************/ 
+/******************************************GLOBAL START*************************/
+/*******************************************************************************/    
+
+
+@font-face {
+font-family: FontAwesome;
+src: url(assets/fonts/fontawesome-webfont.ttf);
+}
+@font-face {
+font-family: myriad-set-pro-ultralight;
+src: url(assets/fonts/myriad-set-pro-ultralight-58e60aedd86bf.ttf);
+}
+@font-face {
+font-family: myriad-set-pro-thin;
+src: url(assets/fonts/myriad-set-pro-thin-58e4d796bb47b.ttf);
+}
+@font-face {
+font-family: myriad-set-pro-bold;
+src: url(assets/fonts/myriad-set-pro-bold-58e60489f32da.ttf);
+}
+@font-face {
+font-family: myriad-set-pro-text;
+src: url(assets/fonts/myriad-set-pro-text-58e604d215bc8.ttf);
+}
+
+.bold {
+  font-family: myriad-set-pro-bold;
+ }
+
+ .color-ff9c01 {
+  color: #ff9c01
+ }
+
+ .color-818181{
+  color: #818181
+ }
+
+ .color-fda158{
+  color: #fda158
+ }
+
+ .color-208700{
+  color: #208700
+ }
+
+ .color-585fb7{
+  color: #585fb7
+ }
+
+ .color-3ba050{
+  color: #3ba050
+ }
+
+ .color-00129a{
+  color: #00129a
+ }
+
+ .color-535353{
+  color: #535353
+ }
+
+ .color-red{
+  color: red
+ }
+
+ .color-green{
+  color: green
+ }
+
+ .color-blue{
+  color: blue
+ }
+
+
+ .margin-0px {
+  margin: 0px;
+ }
+
+/* ACCORDION */
+
+ .accordion .toggleCol {
+  font-family: myriad-set-pro-thin;
+ 
+ }
+ .accordion .toggleCol .fa.fa-angle-down{
+   margin-left: 7px
+ }
+
+ .accordion .toggleCol .fa.fa-angle-right{
+  margin-left: 12px
+}
+
+/* ACCORDION END */
+
+.card-body {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.block{
+  border-bottom:1px solid #DDDDDD;
+  /* margin-bottom: 10px; */
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+.block:hover{
+  background-color: #F1F1F1;
+ } 
+
+body {
+font-family: myriad-set-pro-thin;
+font-size: 18px;
+
+}
+
+.googleMap,
+.link{
+  cursor:pointer;
+  color: #6b6bd8;
+}
+
+.link:hover{
+  text-decoration: underline
+}
+
+a {
+text-decoration: none;
+outline : none;
+}
+
+a:hover, a:focus {
+
+outline : none !important;;
+}
+
+*:focus {
+  outline:0 !important;
+ }
+
+.prices
+  {
+    font-size: 16px;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+.notes{
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  min-height: 80%;
+  padding: 10px 10px 15px 10px;
+  }
+
+input[type],.form-control{
+    
+    border-radius: 10px;
+    height:34px;
+    font-size: 14px;
+    xborder:2px solid gray;
+    }
+
+.input-group.sorting {
+     
+    margin: 0 auto;
+    width:250px
+}
+
+.input-group.sorting button{
+  border-color: #CED4DA;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+margin-top: 0;
+margin-bottom: 0;
+}
+
+h3 {
+font-size: 24px;
+} 
+
+.pointer {
+cursor:pointer;
+}  
+
+.custom-select{
+  font-size: 14px
+}
+
+.searchBox.form-control{
+height: 37px;
+
+font-size:18px;
+font-family: myriad-set-pro-text;
+
+}
+
+.searchBox::-webkit-input-placeholder {
+  font-size:18px;
+  font-family: myriad-set-pro-text;
+  color:#999999
+}
+
+.searchBox:-ms-input-placeholder {
+  font-size:18px;
+  font-family: myriad-set-pro-text;
+  color:#999999
+}
+
+.searchBox:-moz-placeholder {
+  font-size:18px;
+  font-family: myriad-set-pro-text;
+  color:#999999
+}
+
+.searchBox::-moz-placeholder {
+  font-size:18px;
+  font-family: myriad-set-pro-text;
+  color:#999999
+}
+
+.pagination_container{
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+  background: #8E8E8E !important;
+  border-radius: 6px !important;
+}
+
+.my-pagination /deep/ .ngx-pagination a, .ngx-pagination button {
+  cursor: pointer !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+}
+
+
+
+.my-paging-label {
+font-size:15px;
+}
+
+.search_results_label {
+font-family: myriad-set-pro-bold;
+font-size:15px;
+}
+
+.search_results_label .found{
+color:green
+}
+.search_results_label .notFound{
+color:red
+}
+ 
+.img-center{
+margin: 0 auto;
+}
+
+.title-bold{
+  font-family: myriad-set-pro-bold;
+  font-size: 24px;
+}
+
+/****************MODAL**********************/
+.my-modal-header{
+  padding-top:15px
+}
+
+.my-modal-header .modal-title{
+  font-family:myriad-set-pro-bold
+}
+
+.modal-body h3{
+  font-family: myriad-set-pro-ultralight;
+  margin-bottom:15px
+}
+
+.modal-body .input-group {
+  width:243px; 
+  margin:auto
+}
+
+.my-modal-footer {
+  padding-bottom:15px
+}
+
+.my-modal-footer > div{
+  padding:15px
+}
+/***************MODAL END***********************/
+
+/******icons************************************/
+
+/* loading icon */
+
+.fa.fa-spin.fa-spinner.dataLoading{
+font-size:34px;color:gray
+}
+
+/* loading icon */
+
+
+
+
+
+.circle-state-icon{
+width:15px
+}
+
+/******icons end*********************************/
+
+/******************EDITABLE TEXT-BOXES AND TOOLS***************************************/
+    
+.tool-on{
+    color:white;
+  }
+
+  .tool-off{
+    color:#4B4B4B
+  }
+
+  .tool-disabled{
+    color:lightgray
+  }
+
+  /**/
+  .e-txtarea { /*flag for editable text */
+      
+    border:1px solid transparent;
+    text-align: center;
+    resize: none; 
+    height:80%
+}
+  
+  
+ /******************EDITABLE TEXT-BOXES AND TOOLS END***********************************/
+
+
+/****************************MY BUTTONS*************************************/
+
+.my-arrow-left-btn {
+font-size:28px;
+margin-left: 14px;
+}
+
+.my-arrow-left-btn.no-margin,
+.my-arrow-right-btn.no-margin {
+margin:auto
+}
+
+
+.my-arrow-right-btn {
+font-size:28px;
+margin-right: 14px;
+}
+
+/***act-btn***/
+
+.my-act-btn {
+border-radius: 10px;
+
+background-color: #898886;
+color: white;
+border-color: gray;
+border: 1px solid;
+font-family: myriad-set-pro-text;
+padding-left:10px;
+padding-right:10px;
+padding-top:2px;
+padding-bottom:2px;
+width: 100%;
+}
+.my-act-btn:hover {
+
+color: gray;
+background: none;
+}
+
+/***act-btn end***/
+
+/***func-btn***/
+
+.my-func-btn{
+
+border-radius: 8px; 
+font-size: 17px;
+padding-top: 2px;
+padding-bottom: 2px;
+font-family: myriad-set-pro-text;
+background-color: #8e8e8e;
+
+}
+
+
+
+
+.my-func-btn-on{
+color: #f9c210;
+}
+
+.my-func-btn-off{
+color: white;
+}
+
+/***func-btn end***/
+
+/****************************MY BUTTONS END**********************************/
+
+/****************************MY BTN GROUP*******************************/
+
+.my-btn-group .my-group-btn {
+width: 140px; 
+border-radius: 0px; 
+font-size: 17px;
+padding-top: 2px;
+padding-bottom: 2px;
+margin-right: 2px;
+font-family: myriad-set-pro-text;
+background-color: #8e8e8e;
+}
+
+
+
+.my-btn-group .my-group-btn:first-child {
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+}
+
+.my-btn-group .my-group-btn:last-child {
+border-top-right-radius: 8px; 
+border-bottom-right-radius: 8px;
+}
+
+
+.my-btn-group .my-group-btn.auto-width {
+width:auto;
+}   
+
+.my-btn-group .my-group-btn.my-group-btn-smaller {
+font-size: 12px;
+padding-top: 6px;
+padding-bottom: 5px;
+} 
+
+.my-group-btn-off {
+color:white;
+}
+
+.my-group-btn-on {
+color: #f9c210;
+}
+
+
+
+/*******burger btn-group top*****/
+
+.btn-group.my-btn-group.my-btn-group-top button{
+
+width: 126px;
+background: none;
+border: 1px solid #8c8c8c;
+color: #8c8c8c;
+
+}
+
+.btn-group.my-btn-group.my-btn-group-top button:first-child{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 0px;
+}
+
+.btn-group.my-btn-group.my-btn-group-top button:last-child{
+border-top-right-radius: 30px;
+border-bottom-right-radius: 0px;
+
+}
+
+
+
+.btn-group.my-btn-group.my-btn-group-top button.my-group-btn-on{
+
+color:#f9c210;
+background-color: #8e8e8e;
+
+}
+
+.btn-group.my-btn-group.my-btn-group-top button.my-group-btn-off{
+
+color:#8e8e8e;
+background-color: white;
+
+}
+
+
+
+
+/*******burger btn-group top end*****/
+
+
+/*******burger btn-group bottom*****/
+.btn-group.my-btn-group.my-btn-group-bottom button:first-child{
+border-top-left-radius: 0px;
+}
+
+.btn-group.my-btn-group.my-btn-group-bottom button:last-child{
+border-top-right-radius: 0px
+}
+
+.btn-group.my-btn-group.my-btn-group-bottom.no-radius button {
+border-radius: 0px;
+}
+
+/*******burger btn-group bottom end*****/
+
+.my-btn-group button[disabled] {
+opacity: 1;
+
+}
+
+/***************************MY BTN GROUP END*******************************/
+
+/**************************************MY LIST************************************/
+.my-list{
+
+padding-left:15px;
+padding-right:15px;
+font-size: 16px;
+font-family:myriad-set-pro-text
+}
+
+.my-list .row{
+padding-right:0px;
+}
+
+
+
+.my-list .my-list-group-item {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+ 
+  padding-left:0px;
+  cursor:pointer;
+}
+
+
+
+.my-list .my-list-group-item.no-pointer{
+cursor: default
+}
+
+.my-list .my-list-group-item:hover,
+.my-list .my-list-group-item.on
+
+{
+
+background-color: #F1F1F1;
+}
+
+
+
+.my-list .my-list-group-item.my-list-header{
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+
+}
+
+.my-list .my-list-group-item.my-list-header:hover{
+background-color: white;
+cursor: auto;
+}
+
+.my-list .my-list-group-item.my-list-header a{
+cursor: pointer;
+font-family: myriad-set-pro-bold;
+color: #3d98ed;
+}
+
+.my-list .my-list-group-item.my-list-header span{
+  color: #3d98ed;
+  font-size:21px
+}
+
+.my-list .my-list-group-item.my-list-header a:hover{
+text-decoration: none;
+}
+
+.my-list .my-list-group-item:last-child {
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+
+}
+
+.my-list .glyphicon.glyphicon-triangle-top{
+color:#429AE9
+}
+
+.my-list .glyphicon.glyphicon-triangle-bottom{
+color:#429AE9
+}
+/**************************************MY LIST END ************************************/
+
+/*autocomplete*/
+.autocomplete_form i{
+position:absolute;
+right:30px;
+top:10px;
+cursor:pointer
+}
+/*autocomplete*/  
+
+
+
+/*******************************************************************************/  
+/*************************HEADER*************************************************/
+/*******************************************************************************/ 
+
+
+header .my-panel-header {
+width: 100%;
+position:fixed;
+z-index:100
+}
+
+header .my-panel-header .epiMobileLogo {
+width:29px;
+height: 29px;
+cursor: pointer;
+}
+
+header .my-panel-header .siteTitle {
+font-family: myriad-set-pro-text;
+color: white;
+font-size: 25px;
+}
+
+header .my-panel-header .siteTitle span.siteTitle2 {
+
+color: #6b6bd8;
+
+}
+
+
+header .my-panel-header .siteTitleTool {
+padding-top: 5px;
+color: #4B4B4B;
+}
+
+header .my-panel-header .siteTitleTool.disabled span{
+color:grey;
+cursor:auto
+}
+
+header .my-panel-header .siteTitleTool span {
+font-size: 24px;
+cursor: pointer;
+}
+
+
+
+header .my-panel-header .my-btn-group1 { /* preferences, home, logout*/
+background-color:#4b4b4b;
+height: 43px;
+padding-top: 7px;
+}
+header .my-panel-header .my-btn-group1 i {
+font-size:30px;
+color: #a5a5a5;
+}
+
+
+/************/
+header .my-panel-header .my-btn-group2 .btn-group {
+
+padding-bottom:5px
+
+}
+header .my-panel-header .my-btn-group2 {
+background-color:#939393;
+padding-top:5px;
+padding-bottom:5px;
+height: 45px;
+}
+
+/*******************************************************************************/    
+/***************************HEADER END******************************************/
+/*******************************************************************************/ 
+
+/*******************************************************************************/ 
+/***************************MAIN******************************************/
+/*******************************************************************************/ 
+
+main {
+  padding-top:110px
+}
+
+main .container {
+max-width: 768px;
+}
+
+/*******************************************************************************/ 
+/***************************MAIN END********************************************/
+/*******************************************************************************/ 
+
+
+/*******************************************************************************/ 
+/************************************FOOTER*************************************/
+/*******************************************************************************/ 
+
+footer .info-btn{
+
+color:gray;
+font-size:40px;
+
+}
+
+/*******************************************************************************/ 
+/************************************FOOTER END*********************************/
+/*******************************************************************************/ 
+
+
+/*******************************************************************************/  
+/***************************GLOBAL END******************************************/
+/*******************************************************************************/  
+
+
+
+@media (max-width:346px) {   
+  .my-paging-label
+  {
+    font-size: 12px;
+  }
+  
+}

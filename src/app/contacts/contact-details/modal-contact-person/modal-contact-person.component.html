@@ -1,0 +1,18 @@
+<div class="text-center my-modal-header" >
+  <h4 class="modal-title" >{{data.name}}</h4>
+  <hr>
+</div>
+<div class="modal-body">
+  
+   <div class="text-center" style="margin-top: -15px;">{{data.position}}</div>
+   
+   <app-communication-data-cp></app-communication-data-cp>
+  
+</div>
+
+<div class="text-center my-modal-footer" >
+   <hr>
+   <div>
+     <button type="button" class="my-act-btn pointer" (click)="activeModal.dismiss('Close clicked')">Close</button>
+   </div>
+</div>

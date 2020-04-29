@@ -1,0 +1,16 @@
+.my-btn-group.my-btn-group-top .my-group-btn {
+    width: 200px;
+    background: #40A067;
+    color:white;
+    border-color:#40A067
+}
+
+.my-btn-group.my-btn-group-bottom .my-group-btn {
+    width: 100px;
+}
+
+.my-list .block{
+    border-bottom:1px solid #dddddd;
+    padding-top:8px
+}
+

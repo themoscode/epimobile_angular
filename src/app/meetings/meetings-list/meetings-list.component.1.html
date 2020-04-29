@@ -1,0 +1,83 @@
+<header>
+  <div class="container-fluid my-panel-header text-center">
+    <app-panel-header></app-panel-header>
+    <div class="row my-btn-group2" >
+        <div class="col-2"></div>
+        <div class="col-8 text-center siteTitle">
+          Termine
+        </div>
+        <div class="col-2 siteTitleTool disabled text-left">
+            <span class="fa fa-plus"></span>
+        </div>
+      </div>
+  </div>
+</header>
+<main>
+  <div class="container" >
+      <input type="search" class="form-control searchBox text-center"  placeholder="Suche..."   />
+      <div style="height:21px"></div>
+      
+      <div class="text-center">
+        <div class="btn-group my-btn-group">
+          
+              <button type="button" class="btn my-group-btn my-group-btn-off auto-width" >Heute</button>
+              
+              <button type="button" class="btn my-group-btn my-group-btn-on my-group-btn-smaller auto-width" ><span class="fa fa-minus"></span></button>	
+              <button type="button" class="btn my-group-btn my-group-btn-off auto-width"  >0</button>	
+              <button type="button" class="btn my-group-btn my-group-btn-off my-group-btn-smaller auto-width"  ><span class="fa fa-plus"></span></button>	
+              
+         </div>
+      </div>
+      
+      <br>
+      <div class="search_results_label text-center" >
+        <div class="found" >
+            4 Einträge gefunden
+        </div>
+        <div *ngIf="1 === 2" class="notFound" >Keine Einträge gefunden</div>
+      </div>
+      <br>
+      <div class="row text-center">
+        <div class="col-4 text-left"><span class="fa fa-arrow-circle-left my-arrow-left-btn pointer"  ></span></div>
+        <div class="col-4"><span class="my-paging-label">Seite 1 von 10</span></div>
+        <div class="col-4 text-right"><span class="fa fa-arrow-circle-right my-arrow-right-btn pointer"  ></span></div>
+      </div>
+      <div style="height:21px"></div>
+      <div class="text-left my-list" >
+        
+        <div class="text-center pointer block" routerLink="/meeting/1">          
+          <div>
+              <span class="title-bold" >Donnerstag</span><br>
+              <span>15.03.2018 05:00 - 10:00 Uhr</span>
+          </div>
+          <div style="word-break: break-all;">text text text text text text text text text text text text </div>
+          <div style="color:orange" class="title-bold">1 & 1 Internet AG</div>
+        </div>
+        <div class="text-center pointer block" routerLink="/meeting/1">                   
+          <div>
+            <span class="title-bold" >Donnerstag</span><br>
+            <span>15.03.2018 05:00 - 10:00 Uhr</span>
+          </div>
+          <div style="word-break: break-all;">text text text text text text text text text text text text </div>
+          <div style="color:orange" class="title-bold">1 & 1 Internet AG</div>
+        </div>
+        <div class="text-center pointer block" routerLink="/meeting/1">                    
+          <div>
+            <span class="title-bold" >Donnerstag</span><br>
+              <span>15.03.2018 05:00 - 10:00 Uhr</span>
+          </div>
+          <div style="word-break: break-all;">text text text text text text text text text text text text </div>
+          <div style="color:orange" class="title-bold">1 & 1 Internet AG</div>
+        </div>
+        <div class="text-center pointer block" routerLink="/meeting/1">                    
+          <div>
+            <span class="title-bold" >Donnerstag</span><br>
+              <span>15.03.2018 05:00 - 10:00 Uhr</span>
+          </div>
+          <div style="word-break: break-all;">text text text text text text text text text text text text </div>
+          <div style="color:orange" class="title-bold">1 & 1 Internet AG</div>
+        </div>
+        
+    </div>
+  </div>
+</main>

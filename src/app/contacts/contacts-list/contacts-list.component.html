@@ -1,0 +1,73 @@
+<header>
+  <div class="container-fluid my-panel-header text-center">
+    <app-panel-header></app-panel-header>
+    <div class="row my-btn-group2" >
+      <div class="col-2"></div>
+      <div class="col-8 text-center siteTitle">
+        Adressen
+      </div>
+      <div class="col-2 siteTitleTool disabled text-left">
+          <span class="fa fa-plus"></span>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="container" >
+    <input type="search" class="form-control searchBox text-center"  placeholder="Suche..."   />
+  
+    <div style="height:21px"></div>
+    
+      
+      <br>
+      <div class="search_results_label text-center" >
+        <div class="found" >
+          {{getContacts.length}} Einträge gefunden
+        </div>
+        <div *ngIf="1 === 2" class="notFound" >Keine Einträge gefunden</div>
+      </div>
+      <br>
+      <!--
+      <div class="row text-center">
+              <div class="col-4 text-left"><span class="fa fa-arrow-circle-left my-arrow-left-btn pointer"  ></span></div>
+              <div class="col-4"><span class="my-paging-label">Seite 1 von 10</span></div>
+              <div class="col-4 text-right"><span class="fa fa-arrow-circle-right my-arrow-right-btn pointer"  ></span></div>
+      </div>
+      -->
+      <div class="pagination_container">
+        <pagination-controls class="my-pagination"
+            
+            (pageChange)="p = $event"
+            directionLinks="true"
+            previousLabel=""
+            nextLabel="">
+            
+        </pagination-controls>
+      </div>
+      <div style="height:21px"></div>
+
+      <div class="input-group mb-3 sorting">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" (click)="sortBy(sortName,'change_sorting')"><i class="fa" [ngClass]="{'fa-caret-up': !sortDesc[sortName], 'fa-caret-down': sortDesc[sortName]}"></i></button>
+        </div>
+        <select class="custom-select pointer" [ngModel]="sortName" (ngModelChange)="sortBy($event)">
+            <option value="name">Name</option>
+            <option value="customer_no">Kundennummer</option>
+            <option value="supplier_no">Lieferantnummer</option>
+        </select>
+      </div>
+      
+      <div style="height:21px"></div>
+
+      <div class="text-left my-list" >
+        
+        <div  class="pointer block" style="border-bottom:1px solid #dddddd;padding-top:8px" routerLink="/contact/1" *ngFor="let row of getContacts | orderBy: sortName : sortDesc[sortName] | paginate: { itemsPerPage: itemsPerPage, currentPage: p };">
+          <div class="text-center" style="font-family: myriad-set-pro-bold;">{{row.name}}</div>
+          <div class="text-center"><span *ngIf="row.is_client">[K]&nbsp;{{row.customer_no}}</span><span *ngIf="row.is_supplier">&nbsp;&nbsp;[L]&nbsp;{{row.supplier_no}}</span></div>
+        </div>
+        
+
+      </div>
+
+  </div>
+</main>

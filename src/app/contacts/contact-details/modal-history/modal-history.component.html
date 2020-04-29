@@ -1,0 +1,45 @@
+<div class="text-center my-modal-header" >
+  <h4 class="modal-title" >{{data.keyword}}</h4>
+  <hr>
+</div>
+<div class="modal-body">
+  
+  <div class="row">
+    <div class="col-4"><span>Datum</span></div>
+    <div class="col-8 text-right">
+        <div >{{services.tools.dateFrom4d(data.date)}}&nbsp;{{services.tools.timeFrom4d(data.time)}}</div>
+    </div> 
+</div>
+<div class="row">
+    <div class="col-4"><span>Kontaktart</span></div>
+    <div class="col-8 text-right">
+        <div >{{data.com_type_str}}</div>
+    </div> 
+</div>
+<div class="row">
+    <div class="col-4"><span>Dauer</span></div>
+    <div class="col-8 text-right">
+        <div >{{data.duration}}</div>
+    </div> 
+</div>
+<div class="row">
+    <div class="col-4"><span>Ansprechpartner</span></div>
+    <div class="col-8 text-right">
+        <div >{{data.contact_partner}}</div>
+    </div> 
+</div>
+<div class="row">
+    <div class="col-4"><span>Stichwort</span></div>
+    <div class="col-8 text-right">
+        <div >{{data.keyword}}</div>
+    </div> 
+</div>
+   
+</div>
+
+<div class="text-center my-modal-footer" >
+   <hr>
+   <div>
+     <button type="button" class="my-act-btn pointer" (click)="activeModal.dismiss('Close clicked')">Close</button>
+   </div>
+</div>
