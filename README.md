@@ -1,5 +1,7 @@
 # EpiMobile2
 
+A web app made with Angular for the company EPI Development (https://epi.rent)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
 ## Development server
